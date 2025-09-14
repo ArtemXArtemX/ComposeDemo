@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.bignerdranch.android.composedemo"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.bignerdranch.android.composedemo"
