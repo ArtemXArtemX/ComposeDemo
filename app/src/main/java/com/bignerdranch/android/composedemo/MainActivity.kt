@@ -36,4 +36,12 @@ class MainActivity : ComponentActivity() {
             fontWeight = FontWeight.Bold
         )
     }
+
+    @Preview
+    @Composable
+    fun DemoTextPreview() {
+        ComposeDemoTheme {
+            DemoText(message = "Welcome to Android", fontSize = 12f)
+        }
+    }
 }
