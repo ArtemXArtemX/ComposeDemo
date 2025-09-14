@@ -48,14 +48,6 @@ class MainActivity : ComponentActivity() {
         )
     }
 
-    @Preview
-    @Composable
-    fun DemoTextPreview() {
-        ComposeDemoTheme {
-            DemoText(message = "Welcome to Android", fontSize = 12f)
-        }
-    }
-
     @Composable
     fun DemoSlider(sliderPosition: Float, onPositionChange: (Float) -> Unit) {
         Slider(
@@ -87,6 +79,16 @@ class MainActivity : ComponentActivity() {
                 style = MaterialTheme.typography.headlineMedium,
                 text = sliderPosition.toInt().toString() + "sp"
             )
+        }
+    }
+
+    @Preview(showSystemUi = true)
+    @Composable
+    fun DemoTextPreview() {
+        ComposeDemoTheme {
+            Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                DemoScreen(modifier = Modifier.padding(innerPadding))
+            }
         }
     }
 }
